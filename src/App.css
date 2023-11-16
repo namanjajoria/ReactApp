@@ -1,0 +1,39 @@
+.tf{
+    width: 50%;
+}
+.ul{
+    list-style: none;
+}
+.list{
+    border-top: 2px solid khaki;
+    border-bottom: 2px solid khaki;
+    width: 50%;
+    margin:auto;
+}
+.list:hover{
+    background-color: antiquewhite;
+}
+.checkbox:checked{
+    line-break: strict;
+}
+.list input[type="checkbox"]:checked + span{
+    text-decoration: line-through;
+    color: violet;
+}
+.navbar{
+    justify-content: space-around;
+}
+.link{
+    text-decoration: none;
+}
+nav .active{
+    color: black;
+}
+@media screen and (max-width:500px){
+    .list{
+        width: 100%;
+    }
+    .tf{
+        width: 100%;
+    }
+}
