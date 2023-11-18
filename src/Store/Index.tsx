@@ -84,10 +84,15 @@ export const TodosProvider = ({children}:TodoProvide) => {
   )
 }
 
-export const useTodos=()=>{
-    const taskvalue=useContext(Tododata);
-    return taskvalue;
-}
+export const useTodos = () => {
+  const taskvalue = useContext(Tododata);
+
+  if (taskvalue === null) {
+    throw new Error('useTodos must be used within a TodosProvider');
+  }
+
+  return taskvalue;
+};
 
 
 

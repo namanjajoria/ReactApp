@@ -1,7 +1,7 @@
 import { useTodos } from "../Store/Index";
 import { useSearchParams } from "react-router-dom";
 const Lists = () => {
-  const { todos,toggleTodo,deleteTodo } = useTodos(); 
+  const { todos, toggleTodo, deleteTodo } = useTodos(); 
   const [searchParams] = useSearchParams();
   const todosdata= searchParams.get("todos");
   console.log("todos=",todosdata);
@@ -19,7 +19,7 @@ const Lists = () => {
   }
   return (
       <ul className="ul mt-5">
-        {taskdata.map((todo:any,id:any) => {
+        {taskdata.map((todo,id) => {
           return (
             <li key={id}>
               <h4 className="list mb-4 p-2 row">
